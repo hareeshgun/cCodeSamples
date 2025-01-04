@@ -43,8 +43,7 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 */
 
 void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
-    int j = n - 1;
-    int i = m - 1;
+    int i = m - 1, j = n - 1;
     
     for ( int p = m + n - 1; p >= 0 ; p--) {
         if (j < 0)
@@ -60,7 +59,7 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
 void merge1(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
     int i = m - 1, j = n - 1, p = m + n -1;
 
-    while ( >=0 && j >=0) {
+    while ( i >=0 && j >=0) {
         if (nums1[i] > nums2[j])
             nums1[p--] = nums1[i--];
         else
